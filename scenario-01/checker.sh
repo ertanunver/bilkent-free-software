@@ -19,7 +19,7 @@ do
 	do
 		IFS=' ' read -a course <<< "$line"
 		file="html_files/${course[0]}-${course[1]}-${course[2]}.html"
-		url="https://stars.bilkent.edu.tr/homepage/ajax/plainOfferings.php?COURSE_CODE=${course[0]}&SEMESTER=20152"
+		url="https://stars.bilkent.edu.tr/homepage/ajax/plainOfferings.php?COURSE_CODE=${course[0]}&SEMESTER=20171"
 		curl -s -o $file $url	
 		quota=$(node parser.js $file)
 		echo "$line $quota"
